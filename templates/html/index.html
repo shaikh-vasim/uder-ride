@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>UDER WEKLLEY REIDE PREDICTION 	</title>
+    <br><br<br>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"> 
+	
+</head>
+
+
+
+<body>
+<br><br>
+<h1>Uber Weekly Rides Analysis</h1>
+<li>
+        <form action="{{url_for('predict')}}" method="post">
+
+            <input style="  border: 3px solid white;
+            " type="text" name="Priceperweek" placeholder="Priceperweek" required="required"><br><br>
+            <input  style="  border: 3px solid white;" type="text" name="Population" placeholder="Population" required="required">
+            <br><br>
+            <input style="  border: 3px solid white;" type="text" name="Monthlyincome" placeholder="Monthlyincome" required="required"><br>
+            <br>
+            <input style="  border: 3px solid white;" type="text" name="Averageparkingpermonth" placeholder="Averageparkingpermonth" required="required"><br>
+            <br>
+	        
+            <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+        </form>
+        <br>
+        <br>
+     
+       <h2 style="color: yellow; text-align: center;"> {{ prediction_text }} </h2>
+       
+</body>
+</html>
